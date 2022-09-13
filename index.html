@@ -20,25 +20,101 @@
       <li>
         "список ссылок основной навигации сайта с подписями title"
       <ul>
-        <li> <a href="https://www.examle.com" title="нумерованный список гиперссылок">нумерованный список гиперссылок</a></li>
-        <li>
-          <a href="#head2" title="форма">форма</a>
-        </li>
+        <li><a>1список</a></li>
+        <li><a>2список</a></li>
+        <li><a>3список</a></li>
       </ul></li>
-      <li> <a>Ссылка без href</a></li>
-      <li> <a href>ссылку с пустым href</a></li>
-      <li><a href="http://example.com" rel="nofollow">ссылку, по которой запрещен переход поисковикам</a> </li>
+      <li> <a title="ничего">Ссылка без href</a></li>
+      <li> <a href="#">ссылку с пустым href</a></li>
+      <li><a href="http://kubsu.ru" rel="nofollow">ссылку, по которой запрещен переход поисковикам</a> </li>
       <li><a href="http://example.com" rel="nofollow"><!--noindex-->Ссылка, запрещенная для индексации поисковиками<!--/noindex--></a></li>
-      <li>контекстную в тексте абзаца</li>
-      <li>ссылку-изображение</li>
+      <li><p>"контекстная"
+        <a href="http://example.com">ссылка</a>
+        в тексте абзаца
+      <li><a href="https://ecoportal.info/" ><img src="https://ecoportal.info/wp-content/uploads/2020/10/golosemennie-rasteniya-544x467.jpg" alt="описание"></a></li>
       <li>ссылки из прямоугольных и круглых областей картинки (HTML-тег map)</li>
-      <li>относительную на страницу в текущем каталоге</li>
-      <li>относительную на страницу в каталоге about</li>
-      <li>относительную на страницу в каталоге уровнем выше текущего</li>
-      <li>относительную на страницу в каталоге двумя уровнями выше</li>
-      <li>сокращенную на главную</li>
-      <li>сокращенную ссылку на внутреннюю</li>
+      <li><a href="foto">относительную на страницу в текущем каталоге (дляhttps://ex.com/galery/foto)</a></li>
+      <li><a href="foto/dogs">относительную на страницу в каталоге foto (дляhttps://ex.com/galery/foto/dogs)</a></li>
+      <li><a href="../foto">относительную на страницу в каталоге уровнем выше текущегo(для https://ex.com/galery/foto/dogs)</a></li>
+      <li><a href="../../dogs">относительную на страницу в каталоге двумя уровнями выше; (для https://ex.com/galery/foto/dogs</a></li>
+      <li><a href="/"> сокращенную на главную</a></li>
+      <li><a href="galery/foto">сокращенную ссылку на внутреннюю (для https://ex.com/galery/foto)</a>
+      </li>
     </ol>
   </div>
+  <h2>Форма</h2>
+  <form action="/" method="POST">
+    <label>
+      Имя:<br>
+      <input name="name" placeholder="введите ваше имя" />
+    </label>
+    <br>
+    <label>
+      e-mail:
+      <br>
+      <input name="mail" type="email" placeholder="введите вашу почту" />
+    </label>
+    <br>
+    <label>
+      Дата рождения:
+      <br>
+      <input name="field-date" value="2020-07-18" type="date" />
+    </label>
+    <br>
+    <label>
+      Ваш пол:
+      <br>
+      <input type="radio" name="radio-group-1" value="Значение1" checked />
+      Мужской
+    </label>
+    <label>
+      <input type="radio" name="radio-group-1" value="Значение2" />
+      Женский
+    </label>
+    <br>
+    <label>
+      Количество конечностей:
+      <br>
+      <input type="radio" name="radio-group-1" value="Значение1" checked />
+      1
+    </label>
+    <br />
+    <label>
+      <input type="radio" name="radio-group-1" value="Значение1" />
+      2
+    </label>
+    <br />
+    <label>
+      <input type="radio" name="radio-group-1" value="Значение1" />
+      3
+    </label>
+    <br />
+    <label>
+      <input type="radio" name="radio-group-1" value="Значение1" />
+      4
+    </label>
+    <br />
+    Сверхспособности
+    <label>
+      <select name="power" multiple="multiple">
+        <option value="Значение1" selected>умение читать мысли</option>
+        <option value="Значение2">умение летать</option>
+        <option value="Значение3">умение вылечивать раны</option>
+      </select>
+    </label>
+    <br />
+    <label id="some">
+      Биография:
+      <br />
+      <textarea name="bio" placeholder="о себе"></textarea>
+    </label>
+    <br />
+    <label>
+      <input type="checkbox" name="check-1" checked />
+      с контрактом ознакомлен (а)
+    </label>
+    <br />
+    <input type="submit" value="Отправить" />
+  </form>
 </body>
 </html>
